@@ -1,0 +1,6 @@
+.vs/
+env/
+CppProperties.json
+.vscode/
+__pycache__/
+migrations/
