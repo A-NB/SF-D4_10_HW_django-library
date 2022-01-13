@@ -35,10 +35,6 @@ class Book(models.Model):
                                           null=True,
                                           blank=True,
                                           related_name="books",)
-                                         #   on_delete=models.CASCADE,
-                                         #   verbose_name=_("Издательство"),
-                                         #   related_name="pub_house",)
-                                         #  #  default=1,)
     year_publishing = models.SmallIntegerField(verbose_name=_("Год издания"),
                                                 default=0,)
     def __str__(self):
@@ -52,35 +48,3 @@ class PublishingHouse(models.Model):
                             verbose_name=_("Город"),)
     def __str__(self):
         return f'{self.name}'
-
-
-
-# # class Reader(models.Model):
-# #     # id = models.UUIDField(default=uuid.uuid4, primary_key=True,
-# #     #                       verbose_name=_("Уникальный ключ"))
-# #     name = models.CharField(max_length=256, verbose_name=_("Имя"))
-
-# #     books = models.ManyToManyField("p_library.Book",
-# #                                     verbose_name=_("Книги"),
-# #                                     through="p_library.BookReading")
-
-# #     def __str__(self):
-# #         return self.name
-
-
-# # class BookReading(models.Model):
-# #     # id = models.UUIDField(default=uuid.uuid4, primary_key=True,
-# #     #                       verbose_name=_("Уникальный ключ"))
-# #     book = models.ForeignKey("p_library.Book", on_delete=models.CASCADE,
-# #                              verbose_name=_("Книга"),
-# #                              related_name="bookreading_book")
-# #     reader = models.ForeignKey("p_library.Reader", on_delete=models.CASCADE,
-# #                                verbose_name=_("Читатель"),
-# #                                related_name="bookreading_reader")
-# #     completion = models.NullBooleanField(default=None,
-# #                                          verbose_name=_("Чтение завершено"))
-
-# #     def __str__(self):
-# #         return "-".join((str(self.book),
-# #                          str(self.reader),
-# #                          str(self.completion),))        

@@ -18,7 +18,6 @@ def make_range(request):
 def books(request):
     template = loader.get_template('books.html')
     books = Book.objects.all()    
-#    books_count = books.count() #Book.objects.all().count()
     biblio_data = {
         "books": books,
     }
@@ -42,7 +41,6 @@ def copy_count_change(request, action):
             return redirect('/books/')
         else:
             book = Book.objects.filter(id=book_id).first()
-            #book = Book.objects.get(id=book_id)
             if not book:
                 return redirect('/books/')
             if action == '+':
