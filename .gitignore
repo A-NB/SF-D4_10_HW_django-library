@@ -2,6 +2,7 @@
 env/
 CppProperties.json
 requirements+ipython.txt
+Часовые пояса (TIME_ZONE) для settings.xlsb
 .vscode/
 __pycache__/
 migrations/
