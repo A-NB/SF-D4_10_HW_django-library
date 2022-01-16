@@ -1,6 +1,7 @@
 .vs/
 env/
 CppProperties.json
+requirements+ipython.txt
 .vscode/
 __pycache__/
 migrations/
